@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 function Home() {
   return (
     <>
@@ -49,7 +50,7 @@ function Home() {
         />
       </div>
 
-      <div className="flex flex-wrap flex-col md:flex-row pt-20 sm:pt-12 md:pt-12 lg:pt-14 items-center justify-center space-y-6 space-x-0 md:space-y-0 ">
+      <div className="flex flex-wrap flex-col md:flex-row pt-20 sm:pt-12 md:pt-12 lg:pt-14 items-center justify-center space-y-6 space-x-0 md:space-y-0 bg-[#eff6ee]">
         <div className="flex flex-col flex-1 items-center justify-center px-2">
           <div className="flex flex-col flex-1">
             <img
@@ -106,7 +107,7 @@ function Home() {
         </div>
       </div>
       <div
-        className="relative h-full bg-top bg-cover opacity-80  "
+        className="relative h-full bg-top bg-cover opacity-80 mt-2"
         style={{
           backgroundImage: "url('src/assets/2149256895.jpg')",
         }}
@@ -121,7 +122,7 @@ function Home() {
               joy and satisfaction
             </p>
           </div>
-          <div className="basis-2/3 flex flex-wrap flex-col md:flex-row items-center justify-center space-y-2 pt-2">
+          <div className="basis-2/3 flex flex-wrap flex-col md:flex-row items-center justify-center space-y-2 p-2">
             <div className="flex flex-1 flex-col">
               <div className="flex flex-col flex-1 items-center justify-center">
                 <img
@@ -130,12 +131,12 @@ function Home() {
                   className="h-[100px] w-[100px] md:h-[120px] md:w-[120px] lg:h-[140px] lg:w-[140px] rounded-full object-cover"
                 />
               </div>
-              <div className="flex flex-col flex-1 text-center">
-                <h4 className="text-2xl font-semibold capitalize text-white ">
+              <div className="flex flex-col flex-1 text-center mt-1">
+                <h4 className="text-2xl font-semibold capitalize bg-white bg-opacity-80 text-[#161a1d] p-2 mx-4 rounded-md ">
                   Online Delivery
                 </h4>
-                <a href="#" className="px-8 uppercase ">
-                  <button className="relative uppercase font-bold text-xs sm:text-sm text-white hover:text-white px-2 py-px sm:px-8 sm:py-2 rounded-md bg-transparent isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-[#e900ff] to-blue-500 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
+                <a href="#" className="px-8 uppercase mt-1">
+                  <button className="relative uppercase font-bold text-xs sm:text-sm text-white hover:text-white px-2 sm:px-8 rounded-md bg-transparent isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-[#e900ff] to-blue-500 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
                     Order Online
                   </button>
                 </a>
@@ -149,12 +150,12 @@ function Home() {
                   className="h-[100px] w-[100px] md:h-[120px] md:w-[120px] lg:h-[140px] lg:w-[140px] rounded-full object-cover"
                 />
               </div>
-              <div className="flex flex-col flex-1 text-center">
-                <h4 className="text-2xl font-semibold capitalize text-white ">
+              <div className="flex flex-col flex-1 text-center mt-1">
+                <h4 className="text-2xl font-semibold capitalize bg-white bg-opacity-80 text-[#161a1d] p-2 mx-4 rounded-md ">
                   Click & Collect
                 </h4>
-                <a href="#" className="px-8 uppercase">
-                <button className="relative uppercase font-bold text-xs sm:text-sm text-white hover:text-white px-2 py-px sm:px-8 sm:py-2 rounded-md bg-transparent isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-[#e900ff] to-blue-500 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
+                <a href="#" className="px-8 uppercase mt-1">
+                  <button className="relative uppercase font-bold text-xs sm:text-sm text-white hover:text-white px-2 sm:px-8 rounded-md bg-transparent isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-[#e900ff] to-blue-500 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
                     Takeout Order
                   </button>
                 </a>
@@ -168,17 +169,74 @@ function Home() {
                   className="h-[100px] w-[100px] md:h-[120px] md:w-[120px] lg:h-[140px] lg:w-[140px] rounded-full object-cover"
                 />
               </div>
-              <div className="flex flex-col flex-1 text-center">
-                <h4 className="text-2xl font-semibold capitalize text-white ">
+              <div className="flex flex-col flex-1 text-center mt-1">
+                <h4 className="text-2xl font-semibold capitalize bg-white bg-opacity-80 text-[#161a1d] p-2 mx-4 rounded-md ">
                   Restaurant Dining
                 </h4>
-                <a href="#" className="px-8 uppercase">
-                <button className="relative uppercase font-bold text-xs sm:text-sm text-white hover:text-white px-2 py-px sm:px-8 sm:py-2 rounded-md bg-transparent isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-[#e900ff] to-blue-500 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
+                <a href="#" className="px-8 uppercase mt-1">
+                  <button className="relative uppercase font-bold text-xs sm:text-sm text-white hover:text-white px-2 sm:px-8 rounded-md bg-transparent isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-[#e900ff] to-blue-500 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700">
                     Book A Table
                   </button>
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen flex flex-col mt-1 bg-[#edf2fb] rounded-b-[100px]">
+        <div className="basis-1/3 flex flex-col items-center justify-center px-2 pt-2">
+          <h3 className="text-lg text-white font-bold font-titillium bg-[#735751] px-2 rounded-md">
+            Choose your Flavor
+          </h3>
+          <h1 className="text-3xl text-[#2c0703] md:text-5xl lg:text-7xl text-center font-semibold font-robotocondensed py-2">
+            Food that brings people together!
+          </h1>
+          <p className="text-center text-[#613f75] text-sm md:text-base lg:text-lg font-caveat px-4 md:px-32 lg:px-52">
+            Food has a magical way of uniting people, creating bonds and
+            cherished memories, whether through shared meals, cultural
+            traditions, or festive celebrations.
+          </p>
+          <div className="flex max-w-sm rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg">
+            <a href="#">
+              <button className="flex-1 font-bold text-base md:text-lg uppercase bg-white px-4 py-1 md:py-2 md:px-6 lg:py-4 lg:px-8 rounded-xl">
+                View All Menu
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="basis-2/3 w-full flex flex-col md:flex-row items-center justify-center px-4 md:px-4 lg:px-6 pt-2">
+          <div className="flex basis-1/3 flex-col items-center justify-center">
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <img src="/src/assets/pasta_menu.png" alt="#" className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover object-center" />
+            </motion.div>
+            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">Pasta</p>
+          </div>
+          <div className="flex basis-1/3 flex-col items-center justify-center">
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <img src="/src/assets/pizza_menu.png" alt="#" className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover" />
+            </motion.div>
+            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">Pizza</p>
+          </div>
+          <div className="flex basis-1/3 flex-col items-center justify-center">
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <img src="/src/assets/delicious-pie-table (1).png" alt="#" className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover"/>
+            </motion.div>
+            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">Dessert</p>
           </div>
         </div>
       </div>

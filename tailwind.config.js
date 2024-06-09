@@ -22,6 +22,10 @@ module.exports = {
         comfortoo: ["Comforter Brush", "cursive"],
         kalam: ["Kalam", "cursive"],
         merienda: ["Merienda", "cursive"],
+        titillium: ["Titillium Web", "sans-serif"],
+        robotocondensed:["Roboto Condensed", "sans-serif"],
+        caveat:["Caveat", "cursive"],
+        dancingscript:["Dancing Script", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
