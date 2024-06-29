@@ -26,6 +26,7 @@ module.exports = {
         robotocondensed:["Roboto Condensed", "sans-serif"],
         caveat:["Caveat", "cursive"],
         dancingscript:["Dancing Script", "cursive"],
+        anton:["Anton", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

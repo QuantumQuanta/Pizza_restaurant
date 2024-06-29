@@ -1,5 +1,13 @@
+import Location from "./ui/location";
+import Franchise from "./ui/franchise";
 import { motion } from "framer-motion";
+import Footer from "./ui/footer";
+
 function Home() {
+  const imageHoverTapAnimation = {
+    scale: 1.02,
+    transition: { duration: 0.3 },
+  };
   return (
     <>
       {/* Background Image */}
@@ -46,7 +54,7 @@ function Home() {
         <img
           src="/src/assets/pizza_logo_size.png"
           alt="#"
-          className="h-[150px] w-[150px] md:h-[150px] md:w-[150px] lg:h-[350px] lg:w-[350px] -mt-20 sm:-mt-10 md:-mt-12 lg:-mt-40 animate-wiggle"
+          className="h-[150px] w-[150px] md:h-[150px] md:w-[150px] lg:h-[350px] lg:w-[350px] -mt-20 sm:-mt-10 md:-mt-8 lg:-mt-40 animate-wiggle"
         />
       </div>
 
@@ -212,9 +220,15 @@ function Home() {
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <img src="/src/assets/pasta_menu.png" alt="#" className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover object-center" />
+              <img
+                src="/src/assets/pasta_menu.png"
+                alt="#"
+                className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover object-center"
+              />
             </motion.div>
-            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">Pasta</p>
+            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">
+              Pasta
+            </p>
           </div>
           <div className="flex basis-1/3 flex-col items-center justify-center">
             <motion.div
@@ -223,9 +237,15 @@ function Home() {
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <img src="/src/assets/pizza_menu.png" alt="#" className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover" />
+              <img
+                src="/src/assets/pizza_menu.png"
+                alt="#"
+                className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover"
+              />
             </motion.div>
-            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">Pizza</p>
+            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">
+              Pizza
+            </p>
           </div>
           <div className="flex basis-1/3 flex-col items-center justify-center">
             <motion.div
@@ -234,12 +254,87 @@ function Home() {
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <img src="/src/assets/delicious-pie-table (1).png" alt="#" className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover"/>
+              <img
+                src="/src/assets/delicious-pie-table (1).png"
+                alt="#"
+                className="h-[200px] w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] rounded-full object-cover"
+              />
             </motion.div>
-            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">Dessert</p>
+            <p className="text-center text-2xl font-extrabold font-dancingscript pt-1 pb-4">
+              Dessert
+            </p>
           </div>
         </div>
       </div>
+      <div className="w-full h-auto flex flex-col px-3 sm:px-3 md:px-6 lg:px-8 pt-12 sm:pt-12 md:pt-16 lg:pt-18">
+        <div className="flex basis-1/6 justify-between items-center justify-center">
+          <h1 className="text-5xl md:text-5xl lg:text-7xl font-anton font-bold text-[#d00000]">
+            Best Deals!
+          </h1>
+          <a href="#">
+            <button className="p-[3px] relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+              <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                View All
+              </div>
+            </button>
+          </a>
+        </div>
+        <div className="flex basis-5/6 flex-col pt-4 sm:pt-0 md:pt-6 lg:pt-8">
+          <div className="flex flex-1/3">
+            <motion.div
+              className="relative flex shine rounded-2xl"
+              whileHover={imageHoverTapAnimation}
+              whileTap={{ scale: 1.02, transition: { duration: 0.3 } }}
+            >
+              <img
+                src="src/assets/steamy-slice-pizza.jpg"
+                alt="#"
+                className="h-full w-full object-cover rounded-2xl"
+              />
+              <div className="absolute top-2 md:top-6 lg:top-8 right-0 bg-[#d00000] opacity-75 text-white text-md md:text-xl lg:text-3xl font-bold px-2 py-1 rounded-tl-xl rounded-bl-xl">
+                Flat 50% Off
+              </div>
+              <div className="absolute bottom-2 md:bottom-6 lg:bottom-8 w-full bg-[#d00000] opacity-75 text-white text-sm md:text-lg lg:text-2xl text-center font-bold px-2 py-1 sm:py-1 md:py-2 ">
+                Hurry order online and grab your pizza today!
+              </div>
+            </motion.div>
+          </div>
+          <div className="flex flex-row flex-2/3 space-x-4 sm:space-x-4 md:space-x-6 lg:space-x-8 pt-3 sm:pt-3 md:pt-6 lg:pt-8">
+            <motion.div
+              className="relative flex flex-1 shine rounded-2xl"
+              whileHover={imageHoverTapAnimation}
+              whileTap={{ scale: 1.02, transition: { duration: 0.3 } }}
+            >
+              <img
+                src="src/assets/11953563_443.jpg"
+                alt="#"
+                className="h-full w-full object-cover rounded-2xl"
+              />
+              <div className="absolute bottom-5 sm:bottom-5 md:bottom-10 lg:bottom-16 left-0 bg-[#d00000] opacity-75 text-white text-md md:text-xl lg:text-3xl font-bold px-2 py-1 rounded-tr-full rounded-br-full">
+                Save Upto 35%
+              </div>
+            </motion.div>
+            <motion.div
+              className="relative flex flex-1 shine rounded-2xl"
+              whileHover={imageHoverTapAnimation}
+              whileTap={{ scale: 1.02, transition: { duration: 0.3 } }}
+            >
+              <img
+                src="src/assets/22639223_Food-Banner-12.jpg"
+                alt="#"
+                className="h-full w-full object-cover rounded-2xl"
+              />
+              <div className="absolute w-full bottom-5 sm:bottom-5 md:bottom-10 lg:bottom-16 bg-[#d00000] opacity-75 text-white text-sm md:text-lg lg:text-2xl font-bold px-2 py-2">
+                Free Delivery on orders @Rs.299/- or above
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      <Location />
+      <Franchise />
+      <Footer />
     </>
   );
 }
